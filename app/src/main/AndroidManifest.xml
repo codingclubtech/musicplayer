@@ -29,6 +29,13 @@
 
         <service android:name=".MyService" />
 
+        <receiver android:name="MyReceiver">
+            <intent-filter>
+                <action android:name="codingclub.tech.codingclubtutorial.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
 
     </application>
 

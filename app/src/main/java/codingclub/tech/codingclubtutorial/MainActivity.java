@@ -16,9 +16,15 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    public void broadcastIntent(){
+        Intent intent = new Intent();
+        intent.setAction("codingclub.tech.codingclubtutorial.CUSTOM_INTENT"); sendBroadcast(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         // Show this layout that i am passing to you
         setContentView(R.layout.activity_main);
@@ -32,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startService();
+                broadcastIntent();
             }
         });
 
